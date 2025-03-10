@@ -4038,6 +4038,9 @@ MonoBehaviour:
   OnDash:
     m_PersistentCalls:
       m_Calls: []
+  OnSettingsMenu:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1623929140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4052,6 +4055,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   coinCounter: {fileID: 1165002142}
+  inputManager: {fileID: 1623929139}
+  settingsMenu: {fileID: 353680748}
 --- !u!1 &1730992043
 GameObject:
   m_ObjectHideFlags: 0
