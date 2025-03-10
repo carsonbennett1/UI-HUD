@@ -1,4 +1,5 @@
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 
 public class GameManager : SingletonMonoBehavior<GameManager>
@@ -41,12 +42,18 @@ public class GameManager : SingletonMonoBehavior<GameManager>
         isSettingsMenuActive = true;
     }
 
-    private void DisableSettingsMenu()
+    public void DisableSettingsMenu()
     {
         Time.timeScale = 1f;
         settingsMenu.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         isSettingsMenuActive = false;
+    }
+
+    public void QuitGame()
+    {
+        EditorApplication.isPlaying = false;
+        Application.Quit();
     }
 }
